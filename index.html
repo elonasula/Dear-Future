@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DearFuture</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url('background.png') no-repeat center center fixed;
+      background-size: cover;
+      color: #222;
+    }
+    header {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: rgba(255, 255, 255, 0.7);
+    }
+    form {
+      background: rgba(255, 255, 255, 0.9);
+      max-width: 500px;
+      margin: 2rem auto;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+    input, textarea, select {
+      width: 100%;
+      margin-bottom: 1rem;
+      padding: 0.75rem;
+      border-radius: 0.5rem;
+      border: 1px solid #ccc;
+    }
+    button {
+      background-color: #333;
+      color: white;
+      padding: 0.75rem;
+      border: none;
+      width: 100%;
+      border-radius: 0.5rem;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>DearFuture</h1>
+    <p>Skriv ett brev till dig själv eller dina barn i framtiden</p>
+  </header>
+  <form>
+    <label for="personnummer">Personnummer (ÅÅÅÅMMDD-XXXX):</label>
+    <input type="text" id="personnummer" name="personnummer" required />
+
+    <label for="datum">Välj datum för leverans:</label>
+    <input type="date" id="datum" name="datum" required />
+
+    <label for="brev">Skriv ditt brev:</label>
+    <textarea id="brev" name="brev" rows="5" required></textarea>
+
+    <label for="bild">Ladda upp bild:</label>
+    <input type="file" id="bild" name="bild" accept="image/*" />
+
+    <label for="ljud">Ladda upp ljud:</label>
+    <input type="file" id="ljud" name="ljud" accept="audio/*" />
+
+    <label for="video">Ladda upp video:</label>
+    <input type="file" id="video" name="video" accept="video/*" />
+
+    <button type="submit">Skicka brevet</button>
+  </form>
+</body>
+</html>
